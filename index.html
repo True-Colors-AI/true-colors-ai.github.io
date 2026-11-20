@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>True Colors</title>
+  <meta name="description" content="True Colors — third-party auditing for backdoors and secret loyalties. Website coming soon.">
+  <style>
+    html, body {
+      margin: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      box-sizing: border-box;
+      background: #fff;
+    }
+
+    .splash {
+      width: min(85vw, 560px);
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      width: 100%;
+      height: auto;
+      animation: fade-in 1.2s ease-out both;
+    }
+
+    .tagline,
+    .coming-soon {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .tagline {
+      /* The logo image has transparent padding below its wordmark (about 16% of its width);
+         a negative percentage margin, relative to the same width, pulls the line up into it. */
+      margin: -12% 0 0;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: #333;
+      text-wrap: balance;
+      animation: fade-in 1.2s ease-out 0.5s both;
+    }
+
+    .coming-soon {
+      margin: 1rem 0 0;
+      /* letter-spacing also trails the last letter; matching left padding keeps the text centred. */
+      padding-left: 0.3em;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #6b6b6b;
+      animation: fade-in 1.2s ease-out 0.8s both;
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .logo,
+      .tagline,
+      .coming-soon { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="splash">
+    <img class="logo" src="logo_true_colors_transparent_V2.1.png" alt="True Colors" width="1080" height="732">
+    <p class="tagline">Third-party auditing for backdoors and secret loyalties</p>
+    <p class="coming-soon">Website coming soon</p>
+  </main>
+</body>
+</html>
